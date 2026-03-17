@@ -6,11 +6,10 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Full Stack Developer with 4+ years of experience building scalable web
-          applications using React.js, Angular, Next.js, Node.js, and NestJS. Skilled
-          in microservices architecture, CMS development, and low-code platforms.
-          Passionate about creating high-performance, production-ready solutions
-          from concept to deployment.
+          I&apos;m Sujit Sasmal, a student of Arena Animation. Aspiring graphic
+          designer with a passion for visual storytelling, seeking a challenging
+          role to apply my skills in digital and print design, and contribute to
+          innovative branding strategies.
         </p>
       </div>
     </div>

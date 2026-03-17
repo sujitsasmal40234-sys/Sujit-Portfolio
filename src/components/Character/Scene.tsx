@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import setCharacter from "./utils/character";
 import setLighting from "./utils/lighting";
@@ -19,11 +19,10 @@ const Scene = () => {
   const sceneRef = useRef(new THREE.Scene());
   const { setLoading } = useLoading();
 
-  const [character, setChar] = useState<THREE.Object3D | null>(null);
   useEffect(() => {
     if (canvasDiv.current) {
-      let rect = canvasDiv.current.getBoundingClientRect();
-      let container = { width: rect.width, height: rect.height };
+      const rect = canvasDiv.current.getBoundingClientRect();
+      const container = { width: rect.width, height: rect.height };
       const aspect = container.width / container.height;
       const scene = sceneRef.current;
 
@@ -44,34 +43,43 @@ const Scene = () => {
       camera.updateProjectionMatrix();
 
       let headBone: THREE.Object3D | null = null;
-      let screenLight: any | null = null;
+      let screenLight: THREE.Object3D | null = null;
       let mixer: THREE.AnimationMixer;
+      let loadedCharacter: THREE.Object3D | null = null;
 
       const clock = new THREE.Clock();
 
       const light = setLighting(scene);
-      let progress = setProgress((value) => setLoading(value));
+      const progress = setProgress((value) => setLoading(value));
       const { loadCharacter } = setCharacter(renderer, scene, camera);
 
       loadCharacter().then((gltf) => {
         if (gltf) {
           const animations = setAnimations(gltf);
-          hoverDivRef.current && animations.hover(gltf, hoverDivRef.current);
+          if (hoverDivRef.current) {
+            animations.hover(gltf, hoverDivRef.current);
+          }
           mixer = animations.mixer;
-          let character = gltf.scene;
-          setChar(character);
-          scene.add(character);
-          headBone = character.getObjectByName("spine006") || null;
-          screenLight = character.getObjectByName("screenlight") || null;
+          const nextCharacter = gltf.scene;
+          loadedCharacter = nextCharacter;
+          scene.add(nextCharacter);
+          headBone = nextCharacter.getObjectByName("spine006") || null;
+          screenLight = nextCharacter.getObjectByName("screenlight") || null;
           progress.loaded().then(() => {
             setTimeout(() => {
               light.turnOnLights();
               animations.startIntro();
             }, 2500);
           });
-          window.addEventListener("resize", () =>
-            handleResize(renderer, camera, canvasDiv, character)
-          );
+          const onResize = () => {
+            if (loadedCharacter) {
+              handleResize(renderer, camera, canvasDiv, loadedCharacter);
+            }
+          };
+          window.addEventListener("resize", onResize);
+          // Store on window for cleanup closure stability
+          (renderer.domElement as unknown as { __onResize?: () => void }).__onResize =
+            onResize;
         }
       });
 
@@ -130,9 +138,11 @@ const Scene = () => {
         clearTimeout(debounce);
         scene.clear();
         renderer.dispose();
-        window.removeEventListener("resize", () =>
-          handleResize(renderer, camera, canvasDiv, character!)
-        );
+        const stored = renderer.domElement as unknown as { __onResize?: () => void };
+        if (stored.__onResize) {
+          window.removeEventListener("resize", stored.__onResize);
+          delete stored.__onResize;
+        }
         if (canvasDiv.current) {
           canvasDiv.current.removeChild(renderer.domElement);
         }

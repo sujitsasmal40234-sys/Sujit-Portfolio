@@ -1,8 +1,7 @@
 import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaXTwitter,
+  FaEnvelope,
+  FaLocationDot,
+  FaPhone,
 } from "react-icons/fa6";
 import "./styles/SocialIcons.css";
 import { TbNotes } from "react-icons/tb";
@@ -60,23 +59,23 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com/rajeshchityal" target="_blank">
-            <FaGithub />
+          <a href="mailto:sujitsasmal40234@gmail.com" data-cursor="disable">
+            <FaEnvelope />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/rajeshchityal" target="_blank">
-            <FaLinkedinIn />
+          <a href="tel:+918345943769" data-cursor="disable">
+            <FaPhone />
           </a>
         </span>
         <span>
-          <a href="https://x.com/rajeshchityal" target="_blank">
-            <FaXTwitter />
-          </a>
-        </span>
-        <span>
-          <a href="https://www.instagram.com/rajeshchityal" target="_blank">
-            <FaInstagram />
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Tamluk%2C%20West%20Bengal%2C%20India"
+            target="_blank"
+            rel="noreferrer"
+            data-cursor="disable"
+          >
+            <FaLocationDot />
           </a>
         </span>
       </div>

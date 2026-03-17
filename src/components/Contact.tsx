@@ -1,4 +1,4 @@
-import { MdArrowOutward, MdCopyright } from "react-icons/md";
+import { MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
 
 const Contact = () => {
@@ -10,54 +10,36 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:rajeshchittyal21@gmail.com" data-cursor="disable">
-                rajeshchittyal21@gmail.com
+              <a href="mailto:sujitsasmal40234@gmail.com" data-cursor="disable">
+                sujitsasmal40234@gmail.com
               </a>
             </p>
-            <h4>Education</h4>
-            <p>BSc in Computer Science</p>
+            <h4>Phone</h4>
+            <p>
+              <a href="tel:+918345943769" data-cursor="disable">
+                +91 8345943769
+              </a>
+            </p>
+            <h4>Location</h4>
+            <p>Tamluk, West Bengal, India</p>
           </div>
           <div className="contact-box">
-            <h4>Social</h4>
-            <a
-              href="https://github.com/raxx21"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Github <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rajesh-chityal-2a70141b3"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Linkedin <MdArrowOutward />
-            </a>
-            <a
-              href="https://x.com/raxx21_official"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Twitter <MdArrowOutward />
-            </a>
-            <a
-              href="https://www.instagram.com/therajeshchityal"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Instagram <MdArrowOutward />
-            </a>
+            <h4>Education</h4>
+            <p>
+              <strong>(2021–2022)</strong> Tamluk High School — Higher Secondary
+              in Science
+            </p>
+            <p>
+              <strong>(2023–2025)</strong> Arena Animation Institute — Course of
+              Animation VFX
+            </p>
           </div>
           <div className="contact-box">
             <h2>
-              Designed and Developed <br /> by <span>Rajesh Chityal</span>
+              Designed and Developed <br /> by <span>Sujit Sasmal</span>
             </h2>
             <h5>
-              <MdCopyright /> 2025
+              <MdCopyright /> 2026
             </h5>
           </div>
         </div>
