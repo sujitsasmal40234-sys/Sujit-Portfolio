@@ -21,15 +21,15 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    category: "Web",
+    title: "Poster Design",
+    category: "Graphic Design",
     description: "Boosted sales by 60% with optimized UI",
     fullDescription: "Built a seamless shopping experience with modern UI, secure payment integration, and responsive design. The platform handles 1000+ daily users with smooth performance.",
     tools: "React • Next.js • Stripe API • Tailwind CSS",
     tech: ["React", "Next.js", "Stripe", "Tailwind"],
     image: "/images/ecommerce.png",
-    live: "https://example-ecommerce.com",
-    github: "https://github.com/yourusername/ecommerce",
+    live: "https://poster-showcase.vercel.app/",
+    github: "https://github.com/sujitsasmal40234-sys/poster-showcase",
     featured: true
   },
   {
@@ -92,7 +92,7 @@ const Work = () => {
   const [filter, setFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const categories = ["All", "Web", "UI", "Motion"];
+  const categories = ["All", "Graphic Design", "UI", "Motion"];
 
   const filteredProjects =
     filter === "All"
@@ -262,7 +262,7 @@ const Work = () => {
             >
               <MdClose />
             </button>
-            
+
             <div className="modal-body">
               <div className="modal-image-section">
                 <WorkImage
@@ -270,7 +270,7 @@ const Work = () => {
                   alt={selectedProject.title}
                 />
               </div>
-              
+
               <div className="modal-info-section">
                 <div className="modal-header">
                   <h2>{selectedProject.title}</h2>
@@ -278,15 +278,15 @@ const Work = () => {
                     <span className="featured-tag-large">Featured Project</span>
                   )}
                 </div>
-                
+
                 <p className="modal-category">
                   Category: {selectedProject.category}
                 </p>
-                
+
                 <p className="modal-description">
                   {selectedProject.fullDescription}
                 </p>
-                
+
                 <div className="modal-tech-stack">
                   <h4>Tech Stack & Tools</h4>
                   <div className="tech-tags">
@@ -297,7 +297,7 @@ const Work = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="modal-actions">
                   <a
                     href={selectedProject.live}
