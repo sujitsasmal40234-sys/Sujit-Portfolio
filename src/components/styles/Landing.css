@@ -429,7 +429,7 @@ h2.landing-info-h2 {
   }
 
   h2.landing-info-h2 {
-    font-size: clamp(38px, 8vw, 75px);
+    font-size: clamp(32px, 8vw, 75px);
   }
 }
 @media screen and (max-width: 768px) {
@@ -439,8 +439,9 @@ h2.landing-info-h2 {
 
 .landing-info h2 {
   line-height: 1.1;
-  word-break: keep-all;
-  overflow-wrap: break-word;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
 }
   .character-model {
     position: relative;
