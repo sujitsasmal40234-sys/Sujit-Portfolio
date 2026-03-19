@@ -434,15 +434,20 @@ h2.landing-info-h2 {
 }
 @media screen and (max-width: 768px) {
   .landing-info {
-  padding: 0 16px;
-}
+    padding: 0 10px; /* Reduced slightly to give text more room */
+    width: 100%;
+  }
 
-.landing-info h2 {
-  line-height: 1.1;
-  white-space: nowrap;
-  word-break: normal;
-  overflow-wrap: normal;
-}
+  .landing-info h2 {
+    line-height: 1.1;
+    white-space: nowrap !important; 
+    flex-wrap: nowrap !important; /* Stops flexbox from wrapping the text */
+  }
+
+  h2.landing-info-h2 {
+    font-size: clamp(28px, 9vw, 38px) !important; /* Forces fluid text specifically for mobile */
+  }
+
   .character-model {
     position: relative;
     height: auto;
