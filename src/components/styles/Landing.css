@@ -248,7 +248,9 @@
   line-height: 40px;
   position: relative;
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
   text-transform: uppercase;
   letter-spacing: 2px;
   overflow: hidden;
@@ -259,18 +261,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  white-space: nowrap;
 }
 
 h2.landing-info-h2 {
   color: #14b8a6;
   font-size: 42px;
-  width: 120%;
+  width: 100%;
   margin: 0;
   font-family: "Geist", sans-serif;
   font-weight: 600;
   position: relative;
-  margin-left: -5px;
+  margin-left: 0;
+  text-align: center;
   overflow: hidden;
 }
 
@@ -279,12 +281,8 @@ h2.landing-info-h2 {
   top: 0;
   left: 0;
   width: 100%;
-  white-space: nowrap;
 }
 
-.landing-h2-1, .landing-h2-info {
-  white-space: nowrap;
-}
 
 .landing-info-h2::after {
   content: "";
@@ -435,6 +433,15 @@ h2.landing-info-h2 {
   }
 }
 @media screen and (max-width: 768px) {
+  .landing-info {
+  padding: 0 16px;
+}
+
+.landing-info h2 {
+  line-height: 1.1;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
   .character-model {
     position: relative;
     height: auto;
