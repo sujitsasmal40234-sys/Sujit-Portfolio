@@ -24,9 +24,12 @@
 /* ── Filter Buttons ── */
 .filter-buttons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 40px;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .filter-btn {
@@ -136,6 +139,12 @@
 }
 
 .carousel-description {
+  white-space: normal !important;
+  display: block !important;
+  width: 100% !important;
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  text-align: left;
   font-size: 15px;
   line-height: 1.5;
   color: #e0e0e0;
@@ -217,6 +226,11 @@
 }
 
 /* ── Navigation Arrows ── */
+@media only screen and (max-width: 768px) {
+  .carousel-arrow {
+    display: none !important;
+  }
+}
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -256,8 +270,9 @@
 .carousel-dots {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 35px;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .carousel-dot {
@@ -369,6 +384,16 @@
 
   .carousel-arrow-right {
     right: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-info {
+    flex-direction: column !important;
+    gap: 30px;
+  }
+  .carousel-details {
+    width: 100% !important;
   }
 }
 

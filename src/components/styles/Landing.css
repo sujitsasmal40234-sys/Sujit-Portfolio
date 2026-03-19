@@ -156,10 +156,12 @@
     opacity: 0;
     transform: translate(-50%, 100%) scale(1.4);
   }
+
   50% {
     opacity: 1;
     transform: translate(-50%, 100%) scale(1.4);
   }
+
   100% {
     opacity: 0;
     transform: translate(-50%, 100%) scale(1.4);
@@ -282,7 +284,8 @@ h2.landing-info-h2 {
   white-space: nowrap;
 }
 
-.landing-h2-1, .landing-h2-info {
+.landing-h2-1,
+.landing-h2-info {
   white-space: nowrap;
 }
 
@@ -297,6 +300,41 @@ h2.landing-info-h2 {
       rgba(0, 0, 0, 0) 110%);
   top: 0;
   left: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .landing-intro h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .landing-info h3 {
+    font-size: 16px;
+  }
+  .landing-info h2 {
+    font-size: 24px;
+    line-height: 30px;
+    height: auto;
+    margin-left: 0;
+    display: block;
+  }
+  h2.landing-info-h2 {
+    font-size: 30px;
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+    color: var(--accentColor);
+  }
+  .landing-h2-info-1,
+  .landing-h2-2 {
+    position: static !important;
+    font-size: inherit;
+    line-height: inherit;
+    width: auto;
+  }
+  .landing-h2-info,
+  .landing-h2-1 {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 500px) {
