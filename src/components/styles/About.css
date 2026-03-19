@@ -11,7 +11,6 @@
   padding: 20px 0;
   z-index: 50;
 }
-
 .about-me {
   padding: 50px 0px;
   padding-bottom: 0;
@@ -45,20 +44,20 @@
     min-height: 50vh;
     display: block;
   }
-
+  
   .about-me {
     width: 100%;
     max-width: 100%;
     padding: 20px 0;
   }
-
+  
   .about-me h3 {
     font-size: 18px;
     letter-spacing: 4px;
     text-align: center;
     margin-bottom: 20px;
   }
-
+  
   .about-me p {
     font-size: 16px;
     line-height: 26px;
@@ -71,29 +70,27 @@
     justify-content: center;
   }
 }
-
 @media only screen and (min-width: 768px) {
   .about-me {
     width: 500px;
     max-width: calc(100% - 70px);
     transform: translateY(0%);
   }
-
+  
   .about-me h3 {
     font-size: 22px;
   }
-
+  
   .about-me p {
     font-size: 24px;
     line-height: 32px;
   }
-
+  
   .about-section {
     opacity: 1;
     padding: 40px 0;
   }
 }
-
 @media only screen and (min-width: 1025px) {
   .about-section {
     width: var(--cWidth);
@@ -104,21 +101,19 @@
     opacity: 1;
     z-index: 50;
   }
-
   .about-me {
     padding: 0px;
     width: 50%;
   }
-
   .about-me p {
     font-size: 1.9vw;
     line-height: 2.3vw;
   }
 }
-
 @media only screen and (min-width: 1950px) {
   .about-me p {
     font-size: 2.5rem;
     line-height: 2.7rem;
   }
 }
+

@@ -248,61 +248,42 @@
   line-height: 40px;
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-transform: uppercase;
   letter-spacing: 2px;
   overflow: hidden;
 }
 
-/* Mobile responsive for landing info */
-@media only screen and (max-width: 768px) {
-  .landing-info h2 {
-    flex-wrap: wrap;
-    white-space: normal;
-  }
-  
-  .landing-h2-info-1,
-  .landing-h2-2,
-  .landing-h2-1,
-  .landing-h2-info {
-    white-space: normal;
-    position: relative;
-    width: auto;
-  }
-}
-
 .landing-h2-info-1 {
-  position: relative;
-  top: auto;
-  left: auto;
-  width: auto;
-  white-space: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
 }
 
 h2.landing-info-h2 {
   color: #14b8a6;
   font-size: 42px;
-  width: 100%;
+  width: 120%;
   margin: 0;
   font-family: "Geist", sans-serif;
   font-weight: 600;
   position: relative;
   margin-left: -5px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .landing-h2-2 {
-  position: relative;
-  top: auto;
-  left: auto;
-  width: auto;
-  white-space: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .landing-h2-1, .landing-h2-info {
-  white-space: normal;
-  position: relative;
-  width: auto;
+  white-space: nowrap;
 }
 
 .landing-info-h2::after {
@@ -316,32 +297,6 @@ h2.landing-info-h2 {
       rgba(0, 0, 0, 0) 110%);
   top: 0;
   left: 0;
-  pointer-events: none;
-}
-
-/* Remove gradient on mobile for better visibility */
-@media only screen and (max-width: 768px) {
-  .landing-info-h2::after {
-    display: none;
-  }
-  
-  .landing-info {
-    position: relative;
-    right: auto;
-    transform: none;
-    bottom: auto;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .landing-info h3 {
-    text-align: center;
-  }
-  
-  .landing-info h2 {
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 @media screen and (min-width: 500px) {
@@ -477,39 +432,5 @@ h2.landing-info-h2 {
 
   h2.landing-info-h2 {
     font-size: 75px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .landing-section {
-    height: auto;
-    min-height: 100vh;
-  }
-  
-  .landing-container {
-    width: calc(100% - 30px);
-  }
-  
-  .landing-intro h1 {
-    font-size: 40px;
-    line-height: 42px;
-  }
-  
-  .landing-info h3 {
-    font-size: 28px;
-  }
-  
-  .landing-info h2 {
-    font-size: 50px;
-    line-height: 48px;
-    margin-left: 0;
-    justify-content: center;
-  }
-  
-  h2.landing-info-h2 {
-    font-size: 55px;
-    width: 100%;
-    margin-left: 0;
-    justify-content: center;
   }
 }
