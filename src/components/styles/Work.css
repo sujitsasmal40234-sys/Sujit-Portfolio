@@ -701,3 +701,46 @@
     justify-content: center;
   }
 }
+
+/* Additional responsive improvements */
+@media only screen and (max-width: 480px) {
+  .work-section h2 {
+    font-size: 32px;
+  }
+  
+  .filter-buttons {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+  
+  .carousel-slide {
+    padding: 20px 0;
+  }
+  
+  .carousel-details h4 {
+    font-size: 18px;
+  }
+  
+  .carousel-description {
+    font-size: 13px;
+  }
+  
+  .carousel-image-wrapper img {
+    max-height: 200px;
+  }
+  
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .link-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
