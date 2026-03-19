@@ -440,6 +440,7 @@ h2.landing-info-h2 {
 
   .landing-info h2 {
     line-height: 1.1;
+    font-size: clamp(28px, 9vw, 38px);
     white-space: nowrap !important; 
     flex-wrap: nowrap !important; /* Stops flexbox from wrapping the text */
   }
