@@ -37,6 +37,22 @@ body {
   overflow: hidden;
 }
 
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Global responsive fixes */
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Prevent horizontal scroll on all elements */
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;

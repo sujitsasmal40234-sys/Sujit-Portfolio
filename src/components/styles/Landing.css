@@ -434,3 +434,29 @@ h2.landing-info-h2 {
     font-size: 75px;
   }
 }
+
+/* Additional mobile responsive fixes */
+@media only screen and (max-width: 480px) {
+  .landing-section {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  .landing-container {
+    width: calc(100% - 30px);
+  }
+  
+  .landing-intro h1 {
+    font-size: 40px;
+    line-height: 42px;
+  }
+  
+  .landing-info h3 {
+    font-size: 28px;
+  }
+  
+  .landing-info h2 {
+    font-size: 50px;
+    line-height: 48px;
+  }
+}
