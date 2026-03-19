@@ -62,12 +62,6 @@
   transform-origin: left bottom;
   transform: translateX(100%) rotateZ(-90deg);
 }
-
-@media only screen and (max-width: 600px) {
-  .resume-button {
-    display: none;
-  }
-}
 .resume-button:hover {
   color: #fff;
 }
