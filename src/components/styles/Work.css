@@ -11,6 +11,22 @@
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Mobile responsive for heading */
+@media only screen and (max-width: 768px) {
+  .work-section h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .work-section h2 {
+    font-size: 28px;
+  }
 }
 
 .work-section h2>span {
@@ -27,6 +43,7 @@
   gap: 15px;
   margin-bottom: 40px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filter-btn {
@@ -54,6 +71,31 @@
   border-color: var(--accentColor);
   color: var(--backgroundColor);
   box-shadow: 0 0 15px rgba(94, 234, 212, 0.3);
+}
+
+/* Mobile responsive for filters */
+@media only screen and (max-width: 768px) {
+  .filter-buttons {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .filter-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .filter-buttons {
+    gap: 8px;
+  }
+  
+  .filter-btn {
+    padding: 6px 14px;
+    font-size: 11px;
+    flex: 1 1 auto;
+  }
 }
 
 /* ── Carousel ── */
@@ -88,11 +130,25 @@
   background: rgba(255, 255, 255, 0.02);
 }
 
+/* Mobile responsive for carousel */
+@media only screen and (max-width: 768px) {
+  .carousel-slide {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .carousel-slide {
+    padding: 15px 0;
+  }
+}
+
 .carousel-content {
   display: flex;
   align-items: center;
   gap: 60px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .carousel-info {
@@ -100,6 +156,7 @@
   display: flex;
   gap: 30px;
   align-items: flex-start;
+  min-width: 0; /* Allow flex children to shrink/wrap */
 }
 
 .carousel-number h3 {
@@ -110,10 +167,22 @@
   opacity: 0.3;
 }
 
+@media only screen and (max-width: 768px) {
+  .carousel-number h3 {
+    font-size: 30px;
+  }
+  
+  .carousel-info {
+    gap: 15px;
+  }
+}
+
 .carousel-details {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0; /* Ensure content doesn't force width */
+  flex-shrink: 1;
 }
 
 .project-header {
@@ -141,6 +210,10 @@
   color: #e0e0e0;
   margin: 0;
   font-weight: 300;
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
 }
 
 .carousel-details h4 {
@@ -154,6 +227,30 @@
   color: #adacac;
   margin: 0;
   font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel-details h4 {
+    font-size: 20px;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .carousel-category {
+    font-size: 14px;
+  }
+  
+  .carousel-description {
+    font-size: 13px;
+    white-space: normal;
+    width: 100%;
+    text-align: left;
+    overflow-wrap: break-word;
+  }
 }
 
 .carousel-tools {
@@ -209,6 +306,31 @@
   font-size: 16px;
 }
 
+/* Mobile responsive for project links */
+@media only screen and (max-width: 768px) {
+  .project-links {
+    flex-wrap: wrap;
+  }
+  
+  .link-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .project-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .link-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+}
+
 .carousel-image-wrapper {
   flex: 1;
   display: flex;
@@ -252,12 +374,19 @@
   right: -70px;
 }
 
+@media only screen and (max-width: 768px) {
+  .carousel-arrow {
+    display: none;
+  }
+}
+
 /* ── Dot Indicators ── */
 .carousel-dots {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 35px;
+  flex-wrap: wrap;
 }
 
 .carousel-dot {
@@ -380,6 +509,8 @@
 
   .carousel-info {
     width: 100%;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .carousel-image-wrapper {
@@ -666,10 +797,6 @@
   .filter-btn {
     padding: 8px 16px;
     font-size: 12px;
-  }
-
-  .carousel-slide {
-    padding: 30px 0;
   }
 
   .project-links {

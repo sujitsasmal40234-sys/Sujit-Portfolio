@@ -12,6 +12,21 @@
   padding: 120px 0px;
 }
 
+/* Mobile responsive */
+@media only screen and (max-width: 768px) {
+  .career-section {
+    padding: 60px 20px;
+    margin-bottom: 100px;
+  }
+  
+  .career-section h2 {
+    font-size: 40px;
+    line-height: 42px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
+
 .career-section h2 {
   font-size: 70px;
   line-height: 70px;

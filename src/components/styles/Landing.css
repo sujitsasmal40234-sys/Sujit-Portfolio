@@ -282,8 +282,19 @@ h2.landing-info-h2 {
   white-space: nowrap;
 }
 
-.landing-h2-1, .landing-h2-info {
-  white-space: nowrap;
+@media only screen and (max-width: 768px) {
+  .landing-h2-info-1, 
+  .landing-h2-2, 
+  .landing-h2-1, 
+  .landing-h2-info {
+    white-space: normal !important;
+    width: 100%;
+    font-size: 30px !important;
+  }
+  h2.landing-info-h2 {
+    width: 100%;
+    font-size: 35px !important;
+  }
 }
 
 .landing-info-h2::after {

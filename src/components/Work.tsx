@@ -23,7 +23,7 @@ const projects: Project[] = [
     id: 1,
     title: "Poster Design",
     category: "Graphic Design",
-    description: "Modern creative posters showcasing typography, color, and impactful visual storytelling",
+    description: "Bold typography meets impactful visual storytelling",
     fullDescription: "A collection of modern and visually engaging poster designs focused on strong typography, clean layouts, and effective visual communication.",
     tools: "React • Next.js • Stripe API • Tailwind CSS",
     tech: ["React", "Next.js", "Stripe", "Tailwind"],
