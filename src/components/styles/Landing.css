@@ -95,6 +95,7 @@
   height: 400px;
   z-index: 1;
   background-color: #22d3ee;
+  transform: translate(-50%, 63%) scaleX(1.4);
   box-shadow: inset 66px 35px 85px 0px rgba(0, 180, 180, 0.65);
   filter: blur(50px);
   border-radius: 50%;
@@ -113,7 +114,7 @@
   transform: translateX(-50%);
   width: 100%;
   left: 50%;
-  z-index: 5;
+  z-index: 0;
   bottom: 50px;
   pointer-events: inherit;
 }
@@ -128,9 +129,8 @@
   bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 6;
+  z-index: 9;
   position: absolute;
-  pointer-events: none;
 }
 
 .character-model::before {
@@ -141,30 +141,16 @@
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 6;
+  z-index: 9;
   position: absolute;
-  pointer-events: none;
 }
 
 .character-loaded .character-rim {
   animation: backlight 3s forwards;
   animation-delay: 0.3s;
+  opacity: 0;
 }
 
-@keyframes backlight {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, 100%) scale(1.4);
-  }
-  50% {
-    opacity: 1;
-    transform: translate(-50%, 100%) scale(1.4);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, 100%) scale(1.4);
-  }
-}
 
 .character-model canvas {
   position: relative;
@@ -185,10 +171,9 @@
 
 .landing-intro {
   position: absolute;
-  z-index: 10;
+  z-index: 9;
   top: 12%;
   left: 0;
-  pointer-events: none;
 }
 
 .landing-intro h2 {
@@ -226,8 +211,7 @@
   transform: translateX(50%);
   bottom: 40px;
   top: inherit;
-  z-index: 10;
-  pointer-events: none;
+  z-index: 9;
 }
 
 .landing-info h3 {
@@ -248,9 +232,7 @@
   line-height: 40px;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   text-transform: uppercase;
   letter-spacing: 2px;
   overflow: hidden;
@@ -259,28 +241,22 @@
 .landing-h2-info-1 {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
 }
 
 h2.landing-info-h2 {
   color: #14b8a6;
-  font-size: 32px;
-  width: 100%;
+  font-size: 42px;
+  width: 120%;
   margin: 0;
   font-family: "Geist", sans-serif;
   font-weight: 600;
   position: relative;
-  margin-left: 0;
-  text-align: center;
-  overflow: hidden;
+  margin-left: -5px;
 }
 
 .landing-h2-2 {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
 }
 
 
@@ -303,7 +279,7 @@ h2.landing-info-h2 {
   }
 
   .character-model {
-    z-index: 5;
+    z-index: 0;
   }
 
   .landing-info h3 {
@@ -375,13 +351,12 @@ h2.landing-info-h2 {
     left: auto;
     right: 66%;
     transform: translate(0%, -50%);
-    z-index: 12;
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: 12;
+    z-index: inherit;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
@@ -395,13 +370,12 @@ h2.landing-info-h2 {
     left: auto;
     right: 70%;
     transform: translate(0%, -50%);
-    z-index: 12;
   }
 
   .landing-info {
     bottom: auto;
     top: 51%;
-    z-index: 12;
+    z-index: inherit;
     text-align: left;
     transform: translate(0%, -50%);
     right: auto;
@@ -429,6 +403,6 @@ h2.landing-info-h2 {
   }
 
   h2.landing-info-h2 {
-    font-size: clamp(32px, 8vw, 75px);
+    font-size: 75px;
   }
 }
