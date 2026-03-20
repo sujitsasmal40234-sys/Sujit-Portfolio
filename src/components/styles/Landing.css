@@ -430,3 +430,30 @@ h2.landing-info-h2 {
     font-size: auto;
   }
 }
+
+/* Mobile adjustments to widen the container */
+@media (max-width: 768px) {
+  
+  /* 1. Target the main wrapper holding everything */
+  .landing-container {
+    width: 90%;
+    max-width: 600px;
+    /* Reduce side padding so the container reaches closer to the screen edges */
+    padding-left: 15px; 
+    padding-right: 15px;
+  }
+
+  /* 2. Target the specific box holding your text */
+  .landing-info {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 65px;
+    padding-right: 0;
+  }
+
+  /* 3. Make sure the H2 rows take up the full available width */
+  .landing-info-h2 {
+    width: 100%;
+  }
+}
