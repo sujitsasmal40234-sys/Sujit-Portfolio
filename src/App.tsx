@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import { Analytics } from "@vercel/analytics/react";
 

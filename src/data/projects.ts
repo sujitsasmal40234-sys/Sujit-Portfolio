@@ -20,8 +20,8 @@ export const projects: Project[] = [
     fullDescription: "Turning complex ideas into bold, single-frame designs that demand immediate attention.",
     tools: "Adobe Photoshop • Adobe Illustrator • Canva",
     image: "/images/poster design showcase.png",
-    live: "#",
-    github: "#",
+    live: "https://poster-showcase.vercel.app/",
+    github: "https://github.com/sujitsasmal40234-sys/poster-showcase",
     featured: true
   },
   {
